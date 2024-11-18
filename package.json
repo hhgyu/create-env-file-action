@@ -26,6 +26,6 @@
   "homepage": "https://github.com/ozaytsev86/create-env-file#readme",
   "devDependencies": {
     "@actions/core": "^1.11.1",
-    "@vercel/ncc": "^0.38.2"
+    "@vercel/ncc": "^0.38.3"
   }
 }
