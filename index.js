@@ -9,7 +9,9 @@ try {
 
   Object.keys(process.env).forEach(function(key) {
     if(key.startsWith(inputPrefix)) {
-      envFileContent += `${key.substring(inputPrefix.length)}=${process.env[key]}\n`;
+      // JSON.stringify를 사용하여 안전하게 이스케이프 처리
+      const value = JSON.stringify(process.env[key]).slice(1, -1); // 양쪽의 따옴표 제거
+      envFileContent += `${key.substring(inputPrefix.length)}="${value}"\n`;
     }
   });
 
